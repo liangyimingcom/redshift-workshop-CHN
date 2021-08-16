@@ -26,17 +26,21 @@ weight: 20
 本实验假设您已启动 Redshift 集群并配置了客户端工具。如果您尚未配置客户端工具，请参阅 [实验室 1 - 创建 Redshift 集群：配置客户端工具](https://redshift-immersion.workshop.aws/lab1.html#configure-client-tool)。对于本实验，您需要从 [实验室 1 - 创建 Redshift 集群](https://redshift-immersion.workshop.aws/lab1.html) 中收集有关集群的以下信息。
 
 - [DatabaseHostName]
+- [Your-Redshift_Role_Name]
 - [Your-Redshift_Role_Arn]
 
 ![image-20210816205212949](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816205212949.png)
 
 ![image-20210816205319123](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816205319123.png)
 
-如上图所示，
-- [DatabaseHostName] = redshiftcluster-rhhjinvkhhku.crtunilk1uss.us-west-2.redshift.amazonaws.com
-- [Your-Redshift_Role_Arn]=RedshiftImmersionRole
-- [Your_AWS_Account_Id] = 526739712280
+![image-20210816211125728](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816211125728.png)
 
+如上图所示，
+
+- [DatabaseHostName] = redshiftcluster-rhhjinvkhhku.crtunilk1uss.us-west-2.redshift.amazonaws.com
+- [Your-Redshift_Role_Arn]=arn:aws:iam::526739712280:role/RedshiftImmersionRole
+- [Your-Redshift_Role_Name]=RedshiftImmersionRole
+- [Your_AWS_Account_Id] = 526739712280
 
 ## Cloud Formation
 

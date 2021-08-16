@@ -27,7 +27,7 @@ weight: 50
 本实验假设您已启动 Redshift 集群并配置了客户端工具。如果您尚未启动集群，请参阅 [实验室 1 - 创建 Redshift 集群](https://redshift-immersion.workshop.aws/lab1.html)。如果您尚未配置客户端工具，请参阅 [实验室 1 - 创建 Redshift 集群：配置客户端工具](https://redshift-immersion.workshop.aws/lab1.html#configure-client-tool)。对于本实验，您需要从 [实验室 1 - 创建 Redshift 集群](https://redshift-immersion.workshop.aws/lab1.html) 中收集有关集群的以下信息。
 
 - [Your-Redshift_Role_Arn]
-- [你的胶水角色]
+- [Your-Glue_Role]
 
 本实验需要在 *US-WEST-2（俄勒冈）* 区域中的集群。
 
