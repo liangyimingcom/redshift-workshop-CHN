@@ -35,7 +35,7 @@ https://console.aws.amazon.com/rds/home?#launch-dbinstance:gdb=false;s3-import=f
 [![img](https://redshift-immersion.workshop.aws/images/RDS2.png)](https://redshift-immersion.workshop.aws/images/RDS2.png)
 
 3. 滚动到其他连接配置并选中“数据 API”选项以启用通过在线查询编辑器进行访问。
-![img](https://redshift-immersion.workshop.aws/images/RDS3.png)](https://redshift-immersion.workshop.aws/images/RDS3.png)
+[![img](https://redshift-immersion.workshop.aws/images/RDS3.png)](https://redshift-immersion.workshop.aws/images/RDS3.png)
 
 默认情况下，RDS 将在您的默认 VPC 中创建一个数据库。为了让 Redshift 集群能够与 RDS 数据库通信，这两个数据库应该具有网络连接。一种选择是选择与 Redshift 集群相同的 VPC 和安全组。如果您希望将数据库配置为在特定 VPC 中启动，请进行适当的更改。
 

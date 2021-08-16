@@ -1,12 +1,12 @@
 ---
-title: "5. SPECTRUM查询调整"
+title: "5. SPECTRUM查询调优"
 chapter: false
 weight: 50
 ---
 
 
 
-# SPECTRUM查询调整
+# SPECTRUM查询调优
 
 在本实验中，我们将向您展示如何通过利用分区、优化存储和谓词下推来诊断您的 Redshift Spectrum 查询性能并优化性能。
 
@@ -447,7 +447,7 @@ RIGHT OUTER JOIN customer as c ON c.c_custkey = uv.customer
 ORDER BY c.c_name, c.c_mktsegment, uv.visitYearMonth ASC;
 ```
 
-3. 现在让我们对 1992 年到 1994 年三年内的数据运行查询。此查询将访问大约 3 倍的数据，但花费的时间不到 3 倍。 这是因为 SRA 缓存了 1992 年和 1993 年的 Spectrum 结果。这个查询可以重用它而不是再次处理它们。
+2. 现在让我们对 1992 年到 1994 年三年内的数据运行查询。此查询将访问大约 3 倍的数据，但花费的时间不到 3 倍。 这是因为 SRA 缓存了 1992 年和 1993 年的 Spectrum 结果。这个查询可以重用它而不是再次处理它们。
 3. 通过运行查询再次检查 SVL_S3QUERY_SUMMARY：
 
 ```sql
