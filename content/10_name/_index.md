@@ -21,18 +21,51 @@ weight: 10
 ## 在你开始之前
 
 - 登录 AWS 控制台。如果您不熟悉 AWS，则可以创建一个账户。对于本实验，您需要收集以下信息：
-  - [您的 AWS_Account_Id]
+  - [Your_AWS_Account_Id]
   - [Your_AWS_User_Name]
 
-## Cloud Formation
+1. [Your_AWS_Account_Id] 获取方式：
+![](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/20210816192145.png)
 
-要使用云形成启动此集群并自动配置网络安全，请使用以下链接并跳至 [配置客户端工具](https://redshift-immersion.workshop.aws/lab1.html#configure-client-tool)。
-[![启动](https://redshift-immersion.workshop.aws/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=ImmersionLab1&templateURL=https://s3-us-west-2.amazonaws.com/redshift-immersionday-labs/lab1.yaml)
+
+2. [Your_AWS_User_Name] 获取方式：
+
+![image-20210816192437994](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816192437994.png)
+
+![image-20210816192511419](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816192511419.png)
+
+![](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/20210816192825.png)
+
+如上图所示，
+  - [Your_AWS_Account_Id] = 526739712280
+  - [Your_AWS_User_Name] = arn:aws:iam::526739712280:user/EEOverlord
 
 
 {{% notice note %}}
 为集群选择区域时，请考虑 *US-WEST-2（俄勒冈）*。虽然大多数这些实验室可以在任何区域完成，但一些实验室查询位于 *US-WEST-2* 的 S3 中的数据。
+{{% /notice %}}
 
+## Cloud Formation
+
+要*跳过本实验*并要使用CloudFormation启动此集群并自动配置网络安全，请使用以下链接并跳至 [配置客户端工具](#配置客户端工具)。
+[![启动](https://redshift-immersion.workshop.aws/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=ImmersionLab1&templateURL=https://s3-us-west-2.amazonaws.com/redshift-immersionday-labs/lab1.yaml)
+
+
+请保留缺省配置，EETeamRoleArn的配置方式参考下图：
+
+![image-20210816201626090](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816201626090.png)
+
+创建成功后，如下图所示：
+
+![image-20210816202105184](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816202105184.png)
+
+
+
+{{% notice warning %}}
+实验特别提醒：1. 使用了 Cloud Formation 创建集群后，相当于自动完成了全部手动创建步骤；2. 使用了 Cloud Formation 创建集群后，下面的手动操作步骤不需要重复进行；
+{{% /notice %}}
+
+{{% notice note %}}
 该模板将使用默认 CIDR 块 0.0.0.0/0，它提供从任何 IP 地址的访问。最好的做法是替换这个应该具有访问权限的 IP 地址范围。出于这些实验的目的，请将其替换为您的 IP 地址 x.x.x.x/32。
 {{% /notice %}}
 
@@ -175,6 +208,10 @@ https://console.aws.amazon.com/redshiftv2/home?#clusters
 - 其他配置 - 禁用“使用默认值”并选择您之前确定或创建的 VPC、子网组和 VPC 安全组。[![img](https://redshift-immersion.workshop.aws/images/CreateCluster4.png )](https://redshift-immersion.workshop.aws/images/CreateCluster4.png)
 
 保留其余设置的默认值。单击“创建集群”以启动 Redshift 集群。
+
+
+
+
 
 ## 配置客户端工具
 

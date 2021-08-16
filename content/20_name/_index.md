@@ -21,24 +21,47 @@ weight: 20
 - [故障排除负载](https://redshift-immersion.workshop.aws/lab2.html#troubleshooting-loads)
 - [离开前](https://redshift-immersion.workshop.aws/lab2.html#before-you-leave)
 
-## 在你开始之前
+## 开始之前
 
 本实验假设您已启动 Redshift 集群并配置了客户端工具。如果您尚未配置客户端工具，请参阅 [实验室 1 - 创建 Redshift 集群：配置客户端工具](https://redshift-immersion.workshop.aws/lab1.html#configure-client-tool)。对于本实验，您需要从 [实验室 1 - 创建 Redshift 集群](https://redshift-immersion.workshop.aws/lab1.html) 中收集有关集群的以下信息。
 
+- [DatabaseHostName]
 - [Your-Redshift_Role_Arn]
 
-## 云的形成
+![image-20210816205212949](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816205212949.png)
 
-要*跳过本实验*并使用云形成将此示例数据加载到“现有集群”中，请使用以下链接。
+![image-20210816205319123](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816205319123.png)
+
+如上图所示，
+- [DatabaseHostName] = redshiftcluster-rhhjinvkhhku.crtunilk1uss.us-west-2.redshift.amazonaws.com
+- [Your-Redshift_Role_Arn]=RedshiftImmersionRole
+- [Your_AWS_Account_Id] = 526739712280
+
+
+## Cloud Formation
+
+要*跳过本实验*并使用Cloud Formation将此示例数据加载到“现有集群”中，请使用以下链接。
 
 [![启动](https://redshift-immersion.workshop.aws/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=ImmersionLab2&templateURL=https://s3-us-west-2.amazonaws.com/redshift-immersionday-labs/lab2.yaml)
 
-要*跳过本实验*并使用云形成将此示例数据加载到“新集群”中，请使用以下链接。
+![image-20210816210013740](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816210013740.png)
 
-[![启动](https://redshift-immersion.workshop.aws/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=ImmersionLab2&templateURL=https://s3-us-west-2.amazonaws.com/redshift-immersionday-labs/lab2_cluster.yaml)
+
+
+创建成功后，如下图所示：
+
+![image-20210816210127239](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816210127239.png)
+
+
+
+{{% notice warning %}}
+实验特别提醒：
+1）使用了 Cloud Formation 创建集群后，相当于自动完成了全部手动创建步骤；
+2）使用了 Cloud Formation 创建集群后，下面的手动操作步骤不需要重复进行；
+{{% /notice %}}
 
 {{% notice note %}}
-这些云形成模板将创建一个 Lambda 函数，该函数将触发异步 Glue Python Shell 脚本。要监控加载过程并诊断任何加载错误，请参阅 Cloudwatch 日志流。
+这些Cloud Formation模板将创建一个 Lambda 函数，该函数将触发异步 Glue Python Shell 脚本。要监控加载过程并诊断任何加载错误，请参阅 Cloudwatch 日志流。
 
 为集群选择区域时，请考虑 *US-WEST-2（俄勒冈）*。虽然大多数这些实验室可以在任何区域完成，但一些实验室查询位于 *US-WEST-2* 的 S3 中的数据。
 
