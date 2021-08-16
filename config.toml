@@ -1,0 +1,43 @@
+baseURL = "https://redshiftworkshop.ml/"
+ignoreFiles = [ "\\.files/README.md$",  ]
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Redshift Workshop 数仓动手训练营"
+theme = "hugo-theme-learn"
+uglyurls = false
+sectionPagesMenu = "main"
+relativeURLs = true
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  editURL = "https://github.com/liangyimingcom/redshift-workshop-CHN/edit/main/content/"
+  themeVariant = "mine"
+  showVisitedLinks = false
+  author = "me@liangyiming.com"
+  description = "AWS Redshift 数仓动手训练营"
+  disableSearch = false
+  disableAssetsBusting = false
+  disableShortcutsTitle = true
+  branch = "main"
+  pygmentsUseClasses = true
+  pygmentsCodeFences = true
+  pygmentsCodefencesGuessSyntax = true
+  pygmentsStyle = "tango"
+  codeRepoName = "liangyimingcom/redshift-workshop-CHN"
+
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub Project"
+url = "https://github.com/liangyimingcom/redshift-workshop-CHN"
+weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-envelope'></i> Have questions?"
+url = "https://github.com/liangyimingcom/redshift-workshop-CHN/issues"
+weight = 40
+
+[outputs]
+home = [ "HTML", "JSON"]
+page = [ "HTML" ]

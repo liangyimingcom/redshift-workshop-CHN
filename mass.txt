@@ -1,0 +1,92 @@
+
+Lab1: =======================
+
+(in)
+Key
+Value
+DatabaseName	dev
+EETeamRoleArn	-
+InboundTraffic	0.0.0.0/0
+MasterUserPassword	Awsuser123
+MasterUsername	awsuser
+NodeType	ra3.xlplus
+NumberOfNodes	2
+PortNumber	5439
+
+arn:aws:iam::153705321444:user/yiming
+->>
+arn:aws:iam::153705321444:role/RedshiftImmersionRole
+
+(out)
+Key
+Value
+Description
+Export name
+ClusterEndpoint	redshiftcluster-kf4wptaiiipr.cag9j7sr2r57.us-west-2.redshift.amazonaws.com:5439	
+Cluster endpoint	- 
+ClusterName	redshiftcluster-kf4wptaiiipr	
+Name of cluster	-RedshiftClusterSecurityGroupName	sg-010969dfca7f03e77	
+Name of cluster security group	-
+RedshiftClusterSubnetGroupName	immersionlab1-redshiftclustersubnetgroup-3fs18meup3qh	
+Name of cluster subnet group	-
+RedshiftRoleName	RedshiftImmersionRole	
+Name of Redshift Role	-
+
+LAB2 ==========================
+
+DatabaseHostName	redshiftcluster-kf4wptaiiipr.cag9j7sr2r57.us-west-2.redshift.amazonaws.com
+DatabaseName	dev
+MasterUserPassword	**********
+MasterUsername	awsuser
+PortNumber	5439
+RedshiftRole	arn:aws:iam::153705321444:user/yiming
+
+==========================
+==========================
+arn:aws:iam::YOUR_AWS_ACCOUNT_NUMBER:role/ROLE_1,arn:aws:iam::153705321444:saml-provider/JumpCloud
+
+redshiftcluster-kf4wptaiiipr.cag9j7sr2r57.us-west-2.redshift.amazonaws.com:5439/dev
+
+jdbc:redshift://redshiftcluster-kf4wptaiiipr.cag9j7sr2r57.us-west-2.redshift.amazonaws.com:5439/dev
+Driver={Amazon Redshift (x64)}; 
+
+Server=redshiftcluster-kf4wptaiiipr.cag9j7sr2r57.us-west-2.redshift.amazonaws.com; Database=dev
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+              "redshift:GetClusterCredentials",
+              "redshift:CreateClusterUser"
+              ],
+            "Resource": [
+                "arn:aws:redshift:us-west-2:153705321444:cluster:redshiftcluster-kf4wptaiiipr",
+                "arn:aws:redshift:us-west-2:153705321444:dbuser:redshiftcluster-kf4wptaiiipr/${redshift:DbUser}",
+                "arn:aws:redshift:us-west-2:153705321444:dbname:redshiftcluster-kf4wptaiiipr/dev"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "aws:userid": "*:${redshift:DbUser}"
+                }
+            }
+        }
+    ]
+}
+
+adoptopenjdk-15.jdk
+adoptopenjdk-15.jdk
+
+ln -s /Library/Java/JavaVirtualMachines/adoptopenjdk-15.jdk /Applications/SQLWorkbenchJ.app/Contents/PlugIns/
+
+
+ln -s /Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk /Applications/SQLWorkbenchJ.app/Contents/PlugIns/
+
+
+==========================
+
+==========================
+==========================
