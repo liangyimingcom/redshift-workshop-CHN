@@ -1,12 +1,12 @@
 ---
-title: "3. 表设计和查询调整"
+title: "3. 表设计和查询调优"
 chapter: false
 weight: 30
 ---
 
 
 
-# 表设计和查询调整
+# 表设计和查询调优
 
 在本实验中，您将分析压缩、反规范化、分布和排序对 Redshift 查询性能的影响。
 
@@ -19,7 +19,7 @@ weight: 30
 - [加入策略](https://redshift-immersion.workshop.aws/lab3.html#join-strategies)
 - [离开前](https://redshift-immersion.workshop.aws/lab3.html#before-you-leave)
 
-## 在你开始之前
+## 开始之前
 
 本实验假设您已经启动了 Redshift 集群、配置了客户端工具并加载了 TPC Benchmark 数据。如果您尚未启动集群，请参阅 [实验室 1 - 创建 Redshift 集群](https://redshift-immersion.workshop.aws/lab1.html)。如果您尚未加载，请参阅 [实验室 2 - 数据加载](https://redshift-immersion.workshop.aws/lab2.html)。如果您尚未配置客户端工具，请参阅 [实验室 1 - 创建 Redshift 集群：配置客户端工具](https://redshift-immersion.workshop.aws/lab1.html#configure-client-tool)。
 
