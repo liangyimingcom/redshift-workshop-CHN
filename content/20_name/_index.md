@@ -29,11 +29,11 @@ weight: 20
 - [Your-Redshift_Role_Name]
 - [Your-Redshift_Role_Arn]
 
-![image-20210816205212949](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816205212949.png)
+![image-20210816205212949](/images/image-20210816205212949.png)
 
-![image-20210816205319123](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816205319123.png)
+![image-20210816205319123](/images/image-20210816205319123.png)
 
-![image-20210816211125728](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816211125728.png)
+![image-20210816211125728](/images/image-20210816211125728.png)
 
 如上图所示，
 
@@ -48,13 +48,13 @@ weight: 20
 
 [![启动](https://redshift-immersion.workshop.aws/images/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?#/stacks/new?stackName=ImmersionLab2&templateURL=https://s3-us-west-2.amazonaws.com/redshift-immersionday-labs/lab2.yaml)
 
-![image-20210816210013740](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816210013740.png)
+![image-20210816210013740](/images/image-20210816210013740.png)
 
 
 
 创建成功后，如下图所示：
 
-![image-20210816210127239](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816210127239.png)
+![image-20210816210127239](/images/image-20210816210127239.png)
 
 
 

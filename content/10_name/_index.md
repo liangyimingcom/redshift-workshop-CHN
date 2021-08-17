@@ -25,16 +25,16 @@ weight: 10
   - [Your_AWS_User_Name]
 
 1. [Your_AWS_Account_Id] 获取方式：
-![](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/20210816192145.png)
+![](/images/20210816192145.png)
 
 
 2. [Your_AWS_User_Name] 获取方式：
 
-![image-20210816192437994](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816192437994.png)
+![image-20210816192437994](/images/image-20210816192437994.png)
 
-![image-20210816192511419](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816192511419.png)
+![image-20210816192511419](/images/image-20210816192511419.png)
 
-![](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/20210816192825.png)
+![](/images/20210816192825.png)
 
 如上图所示，
   - [Your_AWS_Account_Id] = 526739712280
@@ -53,11 +53,11 @@ weight: 10
 
 请保留缺省配置，EETeamRoleArn的配置方式参考下图：
 
-![image-20210816201626090](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816201626090.png)
+![image-20210816201626090](/images/image-20210816201626090.png)
 
 创建成功后，如下图所示：
 
-![image-20210816202105184](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/image-20210816202105184.png)
+![image-20210816202105184](/images/image-20210816202105184.png)
 
 
 
